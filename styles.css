@@ -1,0 +1,101 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+}
+.blurry-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('skull.jpg');
+    background-size: cover;
+    filter: blur(4px); /* Adjust the blur value as needed */
+  }
+
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 50px; /* Adjust this value to position the navbar vertically */
+    left: 50%; /* Center the navbar horizontally */
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    border-radius: 24px;
+    padding: 4px 48px;
+    z-index: 1000; /* Ensure the navbar appears above other elements */
+}
+
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.navbar li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.navbar li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the height of the underline */
+    background-color: transparent; /* Initial color of the underline */
+    transition: background-color 0.3s ease; /* Transition effect for color change */
+}
+.navbar li a:hover::after {
+    background-color: white; /* Color of the underline on hover */
+}
+
+.navbar li a.active {
+    background-color: #04AA6D;
+}
+
+.navbar:hover + .container .full-screen-image {
+    filter: blur(5px);
+}
+.box {
+    position: absolute;
+    bottom: 5%; /* Adjust as needed */
+    left: 5%; /* Adjust as needed */
+    font-family: 'Roboto', sans-serif; /* Or any attractive font */
+    color: white;
+    z-index: 1001; /* Ensure the text appears above other elements */
+    backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+}
+
+/* Apply the blur effect to the text on hover */
+.navbar:hover + .container .box {
+    filter: blur(5px);}
+    .additional-text {
+        position: absolute;
+        bottom: 1%; /* Adjust as needed */
+        left: 6%; /* Adjust as needed */
+        font-family: 'Roboto', sans-serif; /* Or any attractive font */
+        color: white;
+        z-index: 1001; /* Ensure the text appears above other elements */
+        margin: 18px 1px;
+    }
+    
