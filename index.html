@@ -11,7 +11,7 @@
     
     <div class="container">
         <div class="blurry-background"></div>
- 
+       
   <div class="box"><h1 class="welcome-text">Welcome here</h1>
 <p>Thanks for visiting</p>
 </div>  
@@ -40,7 +40,13 @@ navbarItems.forEach(navbarItem => {
         welcomeText.style.filter = 'none';
     });
 });
-
+window.addEventListener('resize', function() {
+        if (window.innerWidth <= 786) {
+            document.querySelector('.blurry-background').style.backgroundImage = "url('mobile_image.jpg')";
+        } else {
+            document.querySelector('.blurry-background').style.backgroundImage = "url('skull.jpg')";
+        }
+    });
 
 
     
