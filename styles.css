@@ -20,22 +20,7 @@ body, html {
     background-size: cover;
     filter: blur(4px); /* Adjust the blur value as needed */
   }
-.response{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('charlesdeluvio-pcZvxrAyYoQ-unsplash.jpg');
-    background-size: cover;
-    /* filter: blur(4px); Adjust the blur value as needed */
-    display: none;
-  }
-@media(max-width: 786px){
-    .response{
-        display: block;
-        background-size: cover;
-    }
+
 
 
 .navbar {
