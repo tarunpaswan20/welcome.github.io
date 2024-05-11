@@ -22,13 +22,7 @@ body, html {
   }
   
   
-@media(max-width: 786px){
-    .blurry-background{
-        
-        background-image: url(charlesdeluvio-pcZvxrAyYoQ-unsplash.jpg);
-        filter: none;
-    }
-}
+
 
 .navbar {
     list-style-type: none;
